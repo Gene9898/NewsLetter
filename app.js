@@ -1,3 +1,5 @@
+import {key} from "./keys.js"
+
 const express = require("express");
 const bodyParser = require("body-parser");
 const request = require("request");
@@ -34,7 +36,7 @@ app.post("/",function(req,res){
 
   const options = {
     method: "POST",
-    auth: "gene1:cb7090d4243c5db2676d91a2ce617991-us14"
+    auth: "gene1:"+key
   }
   const request = https.request(url,options,function(response){
     if(response.statusCode === 200){
@@ -58,10 +60,3 @@ app.post("/failure",function(req,res){
 app.listen(process.env.PORT || 3000,function(){
   console.log("Server is running on port 3000");
 });
-
-
-// API key
-// cb7090d4243c5db2676d91a2ce617991-us14
-
-// List
-// d86471d8d1
