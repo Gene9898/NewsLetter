@@ -1,4 +1,4 @@
-const key = require("./keys.js")
+const {apikey} = require("./keys.js");
 const express = require("express");
 const bodyParser = require("body-parser");
 const request = require("request");
@@ -35,7 +35,7 @@ app.post("/",function(req,res){
 
   const options = {
     method: "POST",
-    auth: "gene1:"+key
+    auth: "gene1:"+apikey.key1
   }
   const request = https.request(url,options,function(response){
     if(response.statusCode === 200){
