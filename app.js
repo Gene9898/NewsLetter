@@ -1,5 +1,4 @@
-import {key} from "./keys.js"
-
+const key = require("./keys.js")
 const express = require("express");
 const bodyParser = require("body-parser");
 const request = require("request");
