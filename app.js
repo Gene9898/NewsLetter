@@ -35,7 +35,7 @@ app.post("/",function(req,res){
 
   const options = {
     method: "POST",
-    auth: "gene1:"+apikey.key1
+    auth: "gene1:"+apikey.key1 + apikey.key2
   }
   const request = https.request(url,options,function(response){
     if(response.statusCode === 200){
